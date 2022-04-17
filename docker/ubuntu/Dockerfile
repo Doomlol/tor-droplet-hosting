@@ -4,7 +4,7 @@ RUN apt install -y tor cron python3 nano vim git
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt install -y software-properties-common build-essential
 RUN apt install -y curl wget openssh-server nodejs tasksel gcc
-RUN apt install -y make mc autoconf dnsutils tmux openssl
+RUN apt install -y make mc autoconf dnsutils tmux openssl tor
 COPY var/dump /var/dump/
 RUN wget -O /usr/bin/ddssh https://cdn.onionz.dev/app/ddssh
 EXPOSE 22 4200
